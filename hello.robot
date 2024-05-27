@@ -2,8 +2,19 @@
 Library          SeleniumLibrary
 Test TearDown    Close Browser
 
+*** Variables ***
+${URL}    http://www.google.com
+${BROWSER}    chrome
+
 *** Test Cases ***
-Hello
+Hello 01
+    [Tags]  feature01   done
+    เข้ามายังหน้าค้นหาของ google
+    ทำการค้นหาคำว่า hello 
+    ตรวจสอบผลการค้นหาที่ถูกต้อง
+
+Hello 02
+    [Tags]  feature01   testing
     เข้ามายังหน้าค้นหาของ google
     ทำการค้นหาคำว่า hello 
     ตรวจสอบผลการค้นหาที่ถูกต้อง
@@ -16,8 +27,8 @@ Hello
     ...    Longdo Dict
 
 เข้ามายังหน้าค้นหาของ google
-    Open Browser    url=http://www.google.com    browser=chrome
-    ...    options=add_experimental_option("detach", True)
+    Open Browser    url=${URL}    browser=${BROWSER}
+    # ...    options=add_experimental_option("detach", True)
     Maximize Browser Window
 
 ทำการค้นหาคำว่า hello 
