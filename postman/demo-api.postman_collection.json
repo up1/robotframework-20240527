@@ -20,7 +20,7 @@
 							"",
 							"pm.test(\"Product = 5\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(50).to.eql(jsonData.products.length);",
+							"    pm.expect(5).to.eql(jsonData.products.length);",
 							"});",
 							"",
 							"",
