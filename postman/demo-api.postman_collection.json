@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "b4cf98d8-23c9-4ad9-b7a7-f52fc7c4b9bd",
+		"name": "demo-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1453931",
+		"_collection_link": "https://red-firefly-245852.postman.co/workspace/swpark-robot~f8bf9b6c-627b-4301-8712-5b982ff5cbc4/collection/1453931-b4cf98d8-23c9-4ad9-b7a7-f52fc7c4b9bd?action=share&source=collection_link&creator=1453931"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Product = 5\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(5).to.eql(jsonData.products.length);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Schema is valid\", function () {",
+							"  var schema = {",
+							"    type: \"object\",",
+							"    properties: {",
+							"      products: {",
+							"        type: \"array\",",
+							"        items: {",
+							"          type: \"object\",",
+							"          properties: {",
+							"            id: { type: \"number\" },",
+							"            title: { type: \"string\" },",
+							"            description: { type: \"string\" },",
+							"            category: { type: \"string\" },",
+							"            price: { type: \"number\" },",
+							"            discountPercentage: { type: \"number\" },",
+							"            rating: { type: \"number\" },",
+							"            stock: { type: \"number\" },",
+							"            tags: { type: \"array\" },",
+							"            brand: { type: \"string\" },",
+							"            sku: { type: \"string\" },",
+							"            weight: { type: \"number\" },",
+							"            dimensions: { type: \"object\" },",
+							"            warrantyInformation: { type: \"string\" },",
+							"            shippingInformation: { type: \"string\" },",
+							"            availabilityStatus: { type: \"string\" },",
+							"            reviews: { type: \"array\" },",
+							"            returnPolicy: { type: \"string\" },",
+							"            minimumOrderQuantity: { type: \"number\" },",
+							"            meta: { type: \"object\" },",
+							"            images: { type: \"array\" },",
+							"            thumbnail: { type: \"string\" },",
+							"          },",
+							"          required: [\"id\", \"title\", \"description\", \"category\", \"price\", \"discountPercentage\", \"rating\", \"stock\", \"tags\", \"brand\", \"sku\", \"weight\", \"dimensions\", \"warrantyInformation\", \"shippingInformation\", \"availabilityStatus\", \"reviews\", \"returnPolicy\", \"minimumOrderQuantity\", \"meta\", \"images\", \"thumbnail\"],",
+							"        },",
+							"      },",
+							"      total: { type: \"number\" },",
+							"      skip: { type: \"number\" },",
+							"      limit: { type: \"number\" },",
+							"    },",
+							"    required: [\"products\", \"total\", \"skip\", \"limit\"],",
+							"  };",
+							"",
+							"  var response = pm.response.json();",
+							"  pm.expect(tv4.validate(response, schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyjson.com/products?limit=5",
+					"protocol": "https",
+					"host": [
+						"dummyjson",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
