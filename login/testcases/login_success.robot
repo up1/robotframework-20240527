@@ -10,3 +10,4 @@ Login success with username and password
 
     login.เข้ามายังหน้า login
     login.ตรวจสอบหน้า login
+    login.ทำการกรอกข้อมูลด้วย username และ password
