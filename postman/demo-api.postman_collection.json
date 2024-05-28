@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b4cf98d8-23c9-4ad9-b7a7-f52fc7c4b9bd",
+		"_postman_id": "ab1d42ac-5a05-4019-813f-8c9fc0ade891",
 		"name": "demo-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "1453931",
-		"_collection_link": "https://red-firefly-245852.postman.co/workspace/swpark-robot~f8bf9b6c-627b-4301-8712-5b982ff5cbc4/collection/1453931-b4cf98d8-23c9-4ad9-b7a7-f52fc7c4b9bd?action=share&source=collection_link&creator=1453931"
+		"_collection_link": "https://red-firefly-245852.postman.co/workspace/swpark-robot~f8bf9b6c-627b-4301-8712-5b982ff5cbc4/collection/1453931-ab1d42ac-5a05-4019-813f-8c9fc0ade891?action=share&source=collection_link&creator=1453931"
 	},
 	"item": [
 		{
@@ -20,7 +20,7 @@
 							"",
 							"pm.test(\"Product = 5\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(5).to.eql(jsonData.products.length);",
+							"    pm.expect(50).to.eql(jsonData.products.length);",
 							"});",
 							"",
 							"",
