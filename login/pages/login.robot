@@ -11,3 +11,4 @@ Library  SeleniumLibrary
 ทำการกรอกข้อมูลด้วย username และ password
     Input Text  xpath://*[@data-test="username_field"]  demo
     Input Text  xpath://*[@data-test="password_field"]  mode
+    Click Element  xpath://*[@data-test="login_button"]
