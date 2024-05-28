@@ -8,7 +8,7 @@ Library  SeleniumLibrary
 ตรวจสอบหน้า login
     Wait Until Element Contains  id:login_header  Login Page 111111
 
-ทำการกรอกข้อมูลด้วย username และ password
-    Input Text  xpath://*[@data-test="username_field"]  demo
-    Input Text  xpath://*[@data-test="password_field"]  mode
+ทำการกรอกข้อมูลด้วย username=${username} และ password=${password}
+    Input Text  xpath://*[@data-test="username_field"]  ${username}
+    Input Text  xpath://*[@data-test="password_field"]  ${password}
     Click Element  xpath://*[@data-test="login_button"]

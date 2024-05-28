@@ -10,5 +10,5 @@ Login success with username and password
     Maximize Browser Window
     login.เข้ามายังหน้า login
     login.ตรวจสอบหน้า login
-    login.ทำการกรอกข้อมูลด้วย username และ password
+    login.ทำการกรอกข้อมูลด้วย username=demo และ password=mode
     welcome.ตรวจสอบ login success
